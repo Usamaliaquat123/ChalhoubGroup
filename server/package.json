@@ -13,5 +13,8 @@
     "express": "^4.16.4",
     "gulp": "^4.0.0",
     "newsapi": "^2.4.0"
+  },
+  "devDependencies": {
+    "gulp-nodemon": "^2.4.2"
   }
 }
