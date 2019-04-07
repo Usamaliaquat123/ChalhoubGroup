@@ -4,7 +4,9 @@ const NewsAPI = require('newsapi')
 
 const newsapi = new NewsAPI(process.env.NEWS_API_KEY)
 
-
+newsapi.v2.topHeadlines({
+    
+})
 const port = process.env.PORT  || 5000
 
 
