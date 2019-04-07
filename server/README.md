@@ -13,5 +13,6 @@ To spin up the server you must have installed nodejs and gulp in your system
     ```
 To start up the server trigger this command
 ```
-gulp start
+npm start
 ```
+this will trigger the gulpfile to startup the server

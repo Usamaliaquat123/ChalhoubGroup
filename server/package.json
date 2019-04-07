@@ -4,6 +4,7 @@
   "description": "A little server that serve's the News API's",
   "main": "app.js",
   "scripts": {
+    "start" : "gulp start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
