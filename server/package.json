@@ -1,0 +1,15 @@
+{
+  "name": "little-server",
+  "version": "1.0.0",
+  "description": "A little server that serve's the News API's",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "newsapi": "^2.4.0"
+  }
+}
