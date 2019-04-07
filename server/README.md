@@ -1,4 +1,4 @@
-# Server of challenge app
+# Server of challenge app 📂
 
 Challenge app have serve api's of News categories list | headlines | news filteration and much more 😲
 
