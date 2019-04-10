@@ -4,12 +4,13 @@
   "description": "A little server that serve's the News API's",
   "main": "app.js",
   "scripts": {
-    "start" : "gulp",
+    "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^2.4.2",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "gulp": "^4.0.0",

@@ -9,6 +9,24 @@ const app = express()
 dotenv.config();
 const newsapi = new NewsAPI(process.env.NEWS_API_KEY)
 
+ newsapi.v2.topHeadlines({
+        sources: 'bbc-news,the-verge',
+        q: 'bitcoin',
+        category: 'business',
+        language: 'en',
+        country: 'us'
+      }).then(response => {
+        console.log(response);
+        /*
+          {
+            status: "ok",
+            articles: [...]
+          }
+        */
+      });
+
+
+
 const newsCategoryRouter = express.Router()
 
 newsCategoryRouter.route('/categories')
