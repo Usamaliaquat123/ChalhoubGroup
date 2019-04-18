@@ -53,10 +53,7 @@
 }
 .navbar_user li a
 {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
+	
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -65,10 +62,7 @@
 	width: 40px;
 	height: 40px;
 	color: #1e1e27;
-	-webkit-transition: color 0.3s ease;
-	-moz-transition: color 0.3s ease;
-	-ms-transition: color 0.3s ease;
-	-o-transition: color 0.3s ease;
+
 	transition: color 0.3s ease;
 }
 .navbar_user li a:hover
@@ -131,24 +125,16 @@
 {
 	position: absolute;
 	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
 	left: 15px;
 }
-.logo_container a
-{
-	font-size: 24px;
-	color: #1e1e27;
-	font-weight: 700;
-	text-transform: uppercase;
+.logo_container:hover{
+	cursor: pointer;
 }
-.logo_container a span
-{
-	color: #fe4c50;
+.logo_container:focus{
+	outline: 0;
 }
+
 
 
 @media only screen and (max-width: 991px)

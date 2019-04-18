@@ -1,0 +1,25 @@
+<mat-dialog-content>
+    <div class="postDetailImage">
+      <img [src]="avData.image" alt="Image is not available">
+    </div>
+
+    <div class="contentDetail">
+        <h3  class="headingTitle">{{ avData.title }}</h3>
+        <p class="desciptionDetail">{{ avData.description == null ? 'Description is not available' : avData.description }}</p>
+        <div class="detailsSectionPost">
+            <span class="littlePostDetailText">Details</span><br>
+            <!-- Author Name -->
+            <span class="littlePostDetails">Author : {{ avData.author == null ? 'Author is not available!' : avData.author }}</span><br>
+            <!-- Published Date -->
+            <span class="littlePostDetails">Publishing date : {{ avData.date | fromNow : 'hours' }}</span><br>
+            <!-- Source -->
+            <span class="littlePostDetails">Source : {{ avData.source == null ? 'Source is not available' : avData.source  }}</span>
+          </div>
+          </div>  
+
+          <div mat-dialog-actions>
+             <button mat-raised-button color="primary" class="TrendingButton" (click)="closeDialog()">Close</button>
+          </div>
+         
+          <br>
+      </mat-dialog-content>

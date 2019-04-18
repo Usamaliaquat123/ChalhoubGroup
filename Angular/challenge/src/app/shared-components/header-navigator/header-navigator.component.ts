@@ -11,5 +11,8 @@ export class HeaderNavigatorComponent implements OnInit {
 
   ngOnInit() {
   }
+  notify(){
+    alert('Notification service not available')
+  }
 
 }

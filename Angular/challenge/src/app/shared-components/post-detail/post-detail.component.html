@@ -1,0 +1,43 @@
+
+    <div style="float:left;">
+        <div class="headingContainer">
+            <p>Trending News of {{ category }} <span>★</span></p>
+          </div>
+          <div class="styleContainer">
+          <div *ngFor="let catNews of articles">
+            <mat-card class="cardStyle">
+                <img mat-card-image style="height: 481px;" [src]="catNews.urlToImage">
+                <mat-card-content>
+                <p class="headingStyle">{{ catNews.title }}</p>
+                <p>{{ catNews.description == null ? 'Description is not available' :  catNews.description }}</p>
+                <div class="detailsSectionPost">
+                  <span class="littlePostDetailText">Details</span><br>
+                  <!-- Author Name -->
+                  <span class="littlePostDetails">Author : {{ catNews.author == null ? 'Author is not available!' : catNews.author }}</span><br>
+                  <!-- Published Date -->
+                  <span class="littlePostDetails">Publishing date : {{ catNews.publishedAt | fromNow : 'hours' }}</span><br>
+                  <!-- Source -->
+                  <span class="littlePostDetails">Source : {{ catNews.source.name == null ? 'Source is not available' : catNews.source.name  }}</span>
+          
+                </div>
+                </mat-card-content>
+                <button mat-raised-button full class="TrendingButton" (click)="detailpost(catNews)" color="primary">Watch Now</button>
+              </mat-card>
+          </div>
+          </div>
+    </div>
+
+    <div class="MainChannelsContainer">
+        <div class="headingChannelContainer">
+            <p>Channels<span>★</span></p>
+          </div>
+          <div class="channelsContainer">
+            <div style="margin-top:1%;" *ngFor="let source of source">
+              <a [href]="source.url" target="_blank" class="channelName"><span>★</span> {{ source.name }}</a><br>
+            </div>
+            <div class="viewAllContent">
+              <p>★★★</p>
+            </div>
+          </div> 
+    </div>
+

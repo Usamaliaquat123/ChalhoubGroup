@@ -1,0 +1,54 @@
+
+
+
+<div style="float:left;">
+    <div class="headingContainer">
+        <p>Top Trending News <span>★</span></p>
+      </div>
+            <div class="styleContainer">
+              <cdk-virtual-scroll-viewport itemSize="200" class="viewport">
+                  <div>
+                      <mat-card class="cardStyle" *cdkVirtualFor="let TrendingNews of source">
+                          <img mat-card-image style="height: 481px;" [src]="TrendingNews.urlToImage">
+                          <mat-card-content>
+                          <p class="headingStyle">{{ TrendingNews.title }}</p>
+                          <p>{{ TrendingNews.description == null ? 'Description is not available' :  TrendingNews.description }}</p>
+                          <div class="detailsSectionPost">
+                            <span class="littlePostDetailText">Details</span><br>
+                            <!-- Author Name -->
+                            <span class="littlePostDetails">Author : {{ TrendingNews.author == null ? 'Author is not available!' : TrendingNews.author }}</span><br>
+                            <!-- Published Date -->
+                            <span class="littlePostDetails">Publishing date : {{ TrendingNews.publishedAt | fromNow : 'hours' }}</span><br>
+                            <!-- Source -->
+                            <span class="littlePostDetails">Source : {{ TrendingNews.source.name == null ? 'Source is not available' : TrendingNews.source.name  }}</span>
+                    
+                          </div>
+                          </mat-card-content>
+                          <button mat-raised-button class="TrendingButton" (click)="detailpost(TrendingNews)" color="primary">Watch Now</button>
+                        </mat-card>
+                    </div>
+              </cdk-virtual-scroll-viewport>
+             
+              
+              </div>	
+</div>
+<div class="channelsContainerMain">
+    <div class="headingChannelContainer">
+        <p>Channels<span>★</span></p>
+      </div>
+      <div class="channelsContainer">
+        <div style="margin-top:2%;" *ngFor="let source of source">
+          <a [href]="source.url" target="_blank" class="channelName"><span>★</span> {{ source.name }}</a><br>
+        </div>
+        <div class="viewAllContent">
+          <p>★★★</p>
+        </div>
+      </div>
+</div>
+
+
+
+
+
+
+

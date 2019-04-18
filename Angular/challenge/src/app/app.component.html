@@ -1,10 +1,3 @@
-<!-- <div class="fade-in-animations">
-  <div class="container-fluid">
-    <div class="backgroundImage">
-   
-    </div>
-  </div>
-</div> -->
 
 
 <div class="super_container">
@@ -14,47 +7,8 @@
 		<!-- Main Navigation -->
 		<app-header-navigator></app-header-navigator>
 	</header>
-	<!-- App slider -->
-	<app-slider></app-slider>
-	<!-- News categories -->
-	<news-categories></news-categories>
-	<!-- Top Trending News -->
-
 	
-			<div class="headingContainer">
-					<p>Top Trending News <span>★</span></p>
-				</div>
-				<div *ngFor="let TrendingNews of trendingNews10">
-						<div class="container">
-								<div class="square">
-								  <img [src]="TrendingNews.urlToImage" class="mask">
-							   <div class="h1">{{ TrendingNews.title }}</div>
-								  <p class="TrendingContent">{{ TrendingNews.description }}</p>
-								<div class="publishedAt">
-									<p>{{ TrendingNews.publishedAt | fromNow: 'hour' }}</p>
-								</div>	
-								<div class="readMore">
-									<a href="#open-modal">Read More</a>
-								</div>
-							</div>
-				</div>
-		
-			
-		
-		<!-- Detailed News  -->
-		<div id="open-modal" class="modal-window">
-			<div>
-				<a href="#" title="Close" class="modal-close">Close</a>
-				  <h1>Voilà!</h1>
-				  <div>A CSS-only modal based on the :target pseudo-class. Hope you find it helpful.</div>
-				  <div><small>Sponsor</small></div>
-				<a href="https://aminoeditor.com" target="_blank">👉 Amino: Live CSS Editor for Chrome</a>
-			</div>
-			</div>
-		
-
-			
-
-
+	<router-outlet></router-outlet>
+	
 </div>
 

@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 body
 {
 	font-family: 'Poppins', sans-serif;
@@ -10,7 +10,7 @@ body
 	color: #1e1e27;
 }
 
-
 a {
     text-decoration: none
 }
+button:focus {outline:0;}

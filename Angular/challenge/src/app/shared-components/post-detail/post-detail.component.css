@@ -1,0 +1,119 @@
+
+/* For mobile */
+@media only screen and (max-width: 991px){
+	.styleContainer{
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	.cardStyle{
+		max-width: 629px;
+		margin: 4%;
+		box-shadow: 0px 0px 10px -3px rgba(0,0,0,0.75);
+	}
+	.TrendingButton{
+		width: 100%;
+		font-size: 12px;
+		letter-spacing: 0.5px;
+    }
+    .headingContainer{
+        text-align: center;
+        font-weight: 100;
+        font-size: 28px;
+		margin-top: 19%;
+        margin-bottom: 8%;
+	}
+	.MainChannelsContainer{
+		display: none;
+	}
+	
+	
+}
+button:focus {outline:0;}
+/* For web */
+@media only screen and (max-width: 1399px){
+	.MainChannelsContainer{
+		display: none;
+	}
+	.headingContainer{
+        text-align: center;
+        font-weight: 100;
+		font-size: 37px;
+		margin-top: 19%;
+        margin-bottom: 8%;
+	}
+}
+@media only screen and (min-width: 991px)  {
+	.styleContainer{
+		margin-left: 28%;
+		margin-right: -16%;
+	}
+	.headingChannelContainer{
+		text-align: center;
+		font-size: 20px;
+		font-weight: 100;
+		margin-top: 189px;
+		margin-bottom: 2%;
+	}
+	.cardStyle{
+		max-width: 854px;
+		margin: 1%;
+		box-shadow: 0px 0px 10px -3px rgba(0,0,0,0.75);
+	}
+	.TrendingButton{
+		width: 100%;
+		font-size: 12px;
+		letter-spacing: 1px;
+    }
+    .headingContainer{
+        text-align: center;
+		font-size: 37px;
+        font-weight: 100;
+		margin-bottom: 3%;
+		margin-left: 37%;
+	}
+
+	.channelsContainer{
+		margin-top: 3%;
+		margin-left: 74%;
+	}
+	.viewAllContent{
+		font-size: 12px;
+		margin-top: 6%;
+		margin-left: 15%;
+	}
+	.channelName:hover{
+		color: coral;
+		cursor: pointer;
+	}
+	.channelName{
+		color: #272727;
+		font-size: 13px;
+	}
+	
+}
+
+a { 
+	text-decoration: none
+}
+
+/* Post Heading */
+.headingStyle{
+	font-size: 15px;
+    font-weight: bold;
+}
+
+/* Little post details */
+.littlePostDetails{
+	font-size:12px;
+	opacity:.5;
+}
+.littlePostDetailText{
+	font-size:12px;
+	font-weight: bold; 
+	opacity:.5;
+}
+
+
+.mat-fab.mat-primary, .mat-flat-button.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary {
+	background-color: #FE4336;
+}

@@ -10,7 +10,20 @@ import { HeaderNavigatorComponent } from './shared-components/header-navigator/h
 import { SliderComponent } from './shared-components/slider/slider.component';
 import { CategoriesComponent } from './shared-components/categories/categories.component';
 import { MomentCustomPipe } from './pipes/date/moment-custom.pipe';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card'
+import {MatDialogModule} from '@angular/material/dialog'
+import {MatButtonModule} from '@angular/material/button';
+import {ScrollDispatchModule} from '@angular/cdk/scrolling';
+import { ModalComponent } from './shared-components/modal/modal.component';
+import { TrendingNewsComponent } from './shared-components/trending-news/trending-news.component';
+import { PostDetailComponent } from './shared-components/post-detail/post-detail.component';
+import { NotFoundComponentComponent } from './shared-components/not-found-component/not-found-component.component';
+import { Router, RouterModule } from '@angular/router';
+import { HomeComponent } from './containers/home/home.component';
+import { CategoryComponent } from './containers/category/category.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,14 +33,28 @@ import { MomentCustomPipe } from './pipes/date/moment-custom.pipe';
     SliderComponent,
     CategoriesComponent,
     MomentCustomPipe,
-    FromNowPipe
+    FromNowPipe,
+    ModalComponent,
+    TrendingNewsComponent,
+    PostDetailComponent,
+    NotFoundComponentComponent,
+    HomeComponent,
+    CategoryComponent
   ],
+  entryComponents: [ModalComponent],
   imports: [
     BrowserModule,
+    MatCardModule,
     AppRoutingModule,
-    HttpClientModule
+    MatButtonModule,
+    HttpClientModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
+    ScrollDispatchModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+  
