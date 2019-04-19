@@ -23,6 +23,10 @@ export class TrendingNewsComponent   {
   trendingNews: any;
   totalLength : any
 
+
+
+
+  
    async getTrendingNews () {
     await this.newsApi.getTrendingNews('us').subscribe(data => {
       this.data = data

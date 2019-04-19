@@ -6,9 +6,12 @@
         <p>Top Trending News <span>★</span></p>
       </div>
             <div class="styleContainer">
-              <cdk-virtual-scroll-viewport itemSize="200" class="viewport">
-                  <div>
-                      <mat-card class="cardStyle" *cdkVirtualFor="let TrendingNews of source">
+              <div infinite-scroll 
+                  [infiniteScrollDistance]="scrollDistance"
+                  [infiniteScrollThrottle]="throttle"
+                  (scrolled)="onScrollDown()">
+                  <div *ngFor="let TrendingNews of trendingNews10">
+                      <mat-card class="cardStyle">
                           <img mat-card-image style="height: 481px;" [src]="TrendingNews.urlToImage">
                           <mat-card-content>
                           <p class="headingStyle">{{ TrendingNews.title }}</p>
@@ -27,7 +30,7 @@
                           <button mat-raised-button class="TrendingButton" (click)="detailpost(TrendingNews)" color="primary">Watch Now</button>
                         </mat-card>
                     </div>
-              </cdk-virtual-scroll-viewport>
+              </div>
              
               
               </div>	

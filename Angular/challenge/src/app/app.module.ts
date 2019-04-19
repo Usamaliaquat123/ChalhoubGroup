@@ -24,6 +24,7 @@ import { HomeComponent } from './containers/home/home.component';
 import { CategoryComponent } from './containers/category/category.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +52,7 @@ import { environment } from '../environments/environment';
     MatDialogModule,
     BrowserAnimationsModule,
     ScrollDispatchModule,
+    InfiniteScrollModule ,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
