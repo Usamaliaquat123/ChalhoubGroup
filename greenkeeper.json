@@ -1,0 +1,11 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "Angular/challenge/package.json",
+        "React/challenge/package.json",
+        "server/package.json"
+      ]
+    }
+  }
+}
